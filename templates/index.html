@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Luxury Restaurant</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Sintony:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="static/css/main.css">
+</head>
+<body>
+
+	<header id="header" class="header">
+		<div class="main-header">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2">
+						<img src="img/logo.png" alt="Preyaslav Sailing">
+					</div>
+					<div class="col-lg-6">
+						<nav>
+							<ul class="menu d-flex justify-content-between">
+								<li class="menu__item">
+									<a href="#">
+										Home
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#">
+										About us
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#">
+										reservation
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#">
+										interesting information
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#">
+										Adress
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#">
+										contact
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-lg-4">
+						<div>
+							<button class="book cta d-flex justify-content-center" style="float:left; margin-right:20px;">
+								<span class="book__icon"></span>
+							Book your traveling
+							</button>
+						</div>
+
+						<div>
+							<img src="{{url_for('static', filename='img/flag-ua.png')}}" width="20" height="10" alt="flag" class="">
+							<a href="#">
+								<select>
+								  <option value="ua" selected="selected">UA</option>
+								  <option value="en">EN</option>
+								  <option value="pl">PL</option>
+								</select>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="offer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="title">
+							<h1 class="title__heading">
+								Teast your feelings
+							</h1>
+							<p class="title__desc">
+								on
+								<span>
+									Kaniv see.
+								</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section id="call" class="call">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+
+					<div class="phone d-flex ml-auto mr-auto">
+						<div class="phone__text">
+							Call us Now for
+							<span class="yellow">
+								Book Your Traveling
+							</span>
+						</div>
+						<div class="phone__digits">
+							1-008 005 006
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="about" class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="history">
+						<h2 class="history__title">
+							About Service
+						</h2>
+						<p class="history__text">
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged... 
+						</p>
+						<a href="#" class="cta history__button">
+							Read more
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="food-images food-images-down">
+						<img src="{{url_for('static', filename='img/kaniv_sea_1.jpg')}}" width="240" height="180" alt="Sea" class="food">
+						<img src="{{url_for('static', filename='img/kaniv_sea_2.jpg')}}" width="240" height="180" alt="Sea" class="food">
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="food-images">
+						<img src="{{url_for('static', filename='img/kaniv_sea_1.jpg')}}" width="240" height="180" alt="Sea" class="food">
+						<img src="{{url_for('static', filename='img/church.jpg')}}" width="240" height="180" alt="Sea" class="food">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="special" class="special">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-lg-12">
+					<h2 class="special-title">
+						Address
+					</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="food">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d5124.765596389898!2d31.374720999999997!3d50.04166!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d50.0414256!2d31.3766948!5e0!3m2!1suk!2sua!4v1578232933984!5m2!1suk!2sua" width="600" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<!--div class="food">
+						<img src="img/dish.jpg" alt="Dish 1" class="food__img img-fluid">
+						<h3 class="food__title">
+							Food Name one
+						</h3>
+						<p class="food__desc">
+							printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.
+						</p>
+						<div class="food__details d-flex">
+							<div class="food__del">
+								Home
+								<span>
+									Delivary
+								</span>
+							</div>
+							<div class="food__phone">
+								1-008 005 006
+							</div>
+							<div class="food__price yellow ml-auto">
+								<sup><small>$</small></sup>
+								89.00
+							</div>
+						</div>
+					</div-->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer id="footer" class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<ul class="socials d-flex justify-content-center">
+						<li class="socials__item socials__item_fb">
+							<a href="https://www.facebook.com/alexandr.blavatnyi"></a>
+						</li>
+						<li class="socials__item socials__item_tw">
+							<a href="#"></a>
+						</li>
+						<li class="socials__item socials__item_g">
+							<a href="#"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="line"></div>
+				</div>
+				<div class="col-lg-4">
+					<div class="credits">
+						2018 ©   All rights reserved
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="line"></div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<div id="modal" class="modal2">
+		<div class="modal2__overlay">
+			<div class="modal2__body">
+				Text
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</body>
+</html>
