@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Luxury Restaurant</title>
+	<title>Pereyaslav Sailing</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Sintony:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="static/css/main.css">
@@ -13,40 +13,40 @@
 		<div class="main-header">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-2">
-						<img src="img/logo.png" alt="Preyaslav Sailing">
+					<div class="col-lg-1">
+						<div class="logo"><img src="{{url_for('static', filename='img/logo.svg')}}" alt="Preyaslav Sailing"></div>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-7">
 						<nav>
 							<ul class="menu d-flex justify-content-between">
 								<li class="menu__item">
 									<a href="#">
-										Home
+										Головна
 									</a>
 								</li>
 								<li class="menu__item">
 									<a href="#">
-										About us
+										Про нас
 									</a>
 								</li>
 								<li class="menu__item">
 									<a href="#">
-										reservation
+										Резервація
 									</a>
 								</li>
 								<li class="menu__item">
 									<a href="#">
-										interesting information
+										Цікаві відомості
 									</a>
 								</li>
 								<li class="menu__item">
 									<a href="#">
-										Adress
+										Адреса
 									</a>
 								</li>
 								<li class="menu__item">
 									<a href="#">
-										contact
+										Контакти
 									</a>
 								</li>
 							</ul>
@@ -54,9 +54,9 @@
 					</div>
 					<div class="col-lg-4">
 						<div>
-							<button class="book cta d-flex justify-content-center" style="float:left; margin-right:20px;">
+							<button class="book cta d-flex justify-content-center">
 								<span class="book__icon"></span>
-							Book your traveling
+							Зарезервуйте подорож
 							</button>
 						</div>
 
@@ -103,13 +103,13 @@
 
 					<div class="phone d-flex ml-auto mr-auto">
 						<div class="phone__text">
-							Call us Now for
+							Забронювати подорож
 							<span class="yellow">
-								Book Your Traveling
+								Можна за номером
 							</span>
 						</div>
 						<div class="phone__digits">
-							1-008 005 006
+							<a href="tel:+380507211791">(+38)095-071-4079</a>
 						</div>
 					</div>
 
@@ -156,7 +156,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<h2 class="special-title">
-						Address
+						Як нас знайти
 					</h2>
 				</div>
 			</div>
@@ -203,13 +203,16 @@
 				<div class="col-lg-12">
 					<ul class="socials d-flex justify-content-center">
 						<li class="socials__item socials__item_fb">
-							<a href="https://www.facebook.com/alexandr.blavatnyi"></a>
+							<a href="https://www.facebook.com/alexandr.blavatnyi"><img src="https://img.icons8.com/color/50/000000/facebook-circled.png"></a>
 						</li>
 						<li class="socials__item socials__item_tw">
-							<a href="#"></a>
+							<a title="WhatsApp" href="whatsapp://send/?phone=+380507211791"><img src="https://img.icons8.com/officel/50/000000/whatsapp.png"></a>
+						</li>
+						<li class="socials__item socials__item_tw">
+							<a title="Viber" href="viber://chat?number=+380507211791"><img src="https://img.icons8.com/color/50/000000/viber.png"></a>
 						</li>
 						<li class="socials__item socials__item_g">
-							<a href="#"></a>
+							<a title="Skype" href="skype:username"><img src="https://img.icons8.com/color/50/000000/skype.png"></a>
 						</li>
 					</ul>
 				</div>
