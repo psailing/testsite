@@ -26,3 +26,33 @@ $(document).ready(function() { // Ждём загрузки страницы
 	});
 
 });
+
+//var selected = localStorage.getItem('selected');
+//if (selected) {
+//  $(".languages").val(selected);
+//}
+
+
+//$(".languages").change(function() {
+//  localStorage.setItem('selected', $(this).val());
+////  location.reload();
+//  window.location.href = '/';
+//});
+
+function toggle_show(id, ids) {
+	document.getElementById(id).style.display = document.getElementById(id).style.display == 'block' ? 'none' : 'block';
+    if(document.getElementById(id).style.display == "block"){
+        document.getElementById(ids).innerHTML="Згорнути";
+    } else {
+        document.getElementById(ids).innerHTML="Розгорнути";
+    }
+}
+
+//function hide(){
+//    hide=document.getElementById("hide");
+//    button = document.getElementById("button");
+//    if(info.style.display == "none"){
+//    info.style.display = "block";
+//    button.style.display = "none";
+//    }
+//}

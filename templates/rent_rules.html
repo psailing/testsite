@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+
+	<section id="about" class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="history">
+						<h2 class="history__title">
+							About Service
+						</h2>
+						<p class="history__text">
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...
+						</p>
+						<a href="#" class="cta history__button">
+							Read more
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="food-images food-images-down">
+						<img src="{{url_for('static', filename='img/kaniv_sea_1.jpg')}}" width="240" height="180" alt="Sea" class="food">
+						<img src="{{url_for('static', filename='img/kaniv_sea_2.jpg')}}" width="240" height="180" alt="Sea" class="food">
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="food-images">
+						<img src="{{url_for('static', filename='img/kaniv_sea_1.jpg')}}" width="240" height="180" alt="Sea" class="food">
+						<img src="{{url_for('static', filename='img/church.jpg')}}" width="240" height="180" alt="Sea" class="food">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="special" class="special">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-lg-12">
+					<h2 class="special-title">
+						Як нас знайти
+					</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="food">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d5124.765596389898!2d31.374720999999997!3d50.04166!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d50.0414256!2d31.3766948!5e0!3m2!1suk!2sua!4v1578232933984!5m2!1suk!2sua" width="600" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+					</div>
+				</div>
+				<div class="col-lg-4">
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

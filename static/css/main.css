@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .phone {
-	width: 455px;
+	width: 555px;
 }
 
 .phone__text {
@@ -139,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .history {
-	margin-top: 60px;
+	margin-top: -30px;
 }
 
 .history__title {
@@ -352,4 +352,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .fa-whatsapp {
     color: #25d366
+}
+
+#hide {
+    display: none
+}
+
+.green_color{
+    color: #2da9a0
 }
