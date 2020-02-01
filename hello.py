@@ -1,6 +1,10 @@
 from flask import Flask, render_template, request, abort, redirect
 from flask_babel import Babel, gettext
+from flask_wtf import FlaskForm
+from wtforms import StringField, TextAreaField, SelectField
+from wtforms.validators import InputRequired
 app = Flask(__name__)
+app.config['SECRET_KEY']='Thisisasecret'
 
 
 def flag_pic(lang):
@@ -21,6 +25,14 @@ def select_lan(lang):
         return 'pl'
     return 'ua'
 
+class MyForm(FlaskForm):
+    username = StringField("Ім'я та Прізвище", validators=[InputRequired()])
+    email = StringField('Email', validators=[InputRequired()])
+    phone = StringField('Контактний телефон', validators=[InputRequired()])
+    route = SelectField(label='Виберіть маршрут', validators=[InputRequired()], choices=[('3h', '3 години'), ('4h', '4 години'), ('5h', '5 годин'), ('6h', '6 годин'), ('7h', '7 годин'), ('8h', '8 годин')])
+    empty_textarea = ""
+    full_textarea = ""
+
 
 @app.route("/")
 def index():
@@ -38,7 +50,8 @@ def index():
 
 @app.route("/reservation")
 def reservation():
-    return render_template('reservation.html')
+    form=MyForm()
+    return render_template('reservation.html', form=form)
 
 
 @app.route("/contacts")
@@ -53,6 +66,17 @@ def rent_rules():
 def gallery():
     return render_template('gallery.html')
 
+
+
+@app.route('/user/<name>')
+@app.route('/user/')
+def user(name=None):
+    if name is None:
+        name=request.args.get('name')
+    if name:
+        return render_template('hello.html', name=name)
+    else:
+        abort(404)
 
 if __name__ == '__main__':
     app.run(debug=True)

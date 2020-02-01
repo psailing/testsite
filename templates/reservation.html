@@ -1,83 +1,94 @@
 {% extends 'base.html' %}
 {% block content %}
 
-	<section id="about" class="about">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="history">
-						<h2 class="history__title">
-							About Service
-						</h2>
-						<p class="history__text">
-							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...
-						</p>
-						<a href="#" class="cta history__button">
-							Read more
-						</a>
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<div class="food-images food-images-down">
-						<img src="{{url_for('static', filename='img/kaniv_sea_1.jpg')}}" width="240" height="180" alt="Sea" class="food">
-						<img src="{{url_for('static', filename='img/kaniv_sea_2.jpg')}}" width="240" height="180" alt="Sea" class="food">
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<div class="food-images">
-						<img src="{{url_for('static', filename='img/kaniv_sea_1.jpg')}}" width="240" height="180" alt="Sea" class="food">
-						<img src="{{url_for('static', filename='img/church.jpg')}}" width="240" height="180" alt="Sea" class="food">
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
-	<section id="special" class="special">
-		<div class="container">
+{% from "_render_field.html" import render_field %}
+<section id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="history">
+                    <h2 class="history__title">
+                        РЕЗЕРВАЦІЯ
+                    </h2>
+                    <form method="post" action="/" class="reservation_form">
+                        {{ form.csrf_token }}
+<!--                        <div class="form_froup">-->
+<!--                            <label for="inputName" class="col-lg-2">Ім'я та прізвище:</label>-->
+<!--                            <div class="col-lg-5">-->
+<!--                               <input type="text" class="form_control" id="inputName" placeholder="Ім'я та прізвище" required>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                        {{ render_field(form.username) }}
+                        {{ render_field(form.email) }}
+<!--                        <div>-->
+<!--                            <label for="name">Ім'я та прізвище:</label>-->
+<!--                            <input type="text" name="name" required>-->
+<!--                        </div>-->
+<!--                        <div class="form_froup">-->
+<!--                            <label for="inputEmail" class="col-lg-2">Email:</label>-->
+<!--                            <div class="col-lg-5">-->
+<!--                               <input type="text" class="form_control" id="inputEmail" placeholder="Email" required>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <label for="email">E-mail</label>-->
+<!--                            <input type="email" name="email" required>-->
+<!--                        </div>-->
+                        {{ render_field(form.phone) }}
+                        {{ render_field(form.route) }}
+<!--                        <div>-->
+<!--                            <label for="phone_num">Контактний телефон:</label>-->
+<!--                            <input type="phone_num" name="phone_num" required>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <label for="path">Виберіть маршрут</label>-->
+<!--                            <select name="path">-->
+<!--                                <option value="3h">3 години</option>-->
+<!--                                <option value="4h">4 години</option>-->
+<!--                                <option value="5h">5 годин</option>-->
+<!--                                <option value="6h">6 годин</option>-->
+<!--                                <option value="7h">7 годин</option>-->
+<!--                                <option value="8h">8 годин</option>-->
+<!--                            </select>-->
+<!--                        </div>-->
+							<p><b>Увага:</b> якщо яхта зайнята на бажаний день - телефонуйте 073-211-55-86 і ми підберемо Вам іншу яхту!</p>
 
-			<div class="row">
-				<div class="col-lg-12">
-					<h2 class="special-title">
-						Як нас знайти
-					</h2>
-				</div>
-			</div>
+							<p>Ваші побажання:</p>
+							<p><textarea id="comment" placeholder="Ваші побажання" style="float: left; margin-left: 10px; width: 460px;"></textarea></p>
 
-			<div class="row">
-				<div class="col-lg-8">
-					<div class="food">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d5124.765596389898!2d31.374720999999997!3d50.04166!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d50.0414256!2d31.3766948!5e0!3m2!1suk!2sua!4v1578232933984!5m2!1suk!2sua" width="600" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<!--div class="food">
-						<img src="img/dish.jpg" alt="Dish 1" class="food__img img-fluid">
-						<h3 class="food__title">
-							Food Name one
-						</h3>
-						<p class="food__desc">
-							printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.
-						</p>
-						<div class="food__details d-flex">
-							<div class="food__del">
-								Home
-								<span>
-									Delivary
-								</span>
-							</div>
-							<div class="food__phone">
-								1-008 005 006
-							</div>
-							<div class="food__price yellow ml-auto">
-								<sup><small>$</small></sup>
-								89.00
-							</div>
+						</br>
+						</br>
+						<div style="matgin-top: 100px;">
+							<h6>Умови бронювання та оплати:</h6>
+							 <textarea id="rules" style="width: 400px; height: 200px;" readonly="true">
+1. Резервація, зроблене на сайті або по телефону, дійсне протягом 24 годин.
+2. При здійсненні передплати в зазначений термін бронювання зберігається за Вами.
+3. При відсутності передплати протягом 24 годин, бронювання автоматично знімається і, тепер, час і день стають вільними для наступних бронювань.
+4. Сума передплати повертається клієнтові в повному обсязі в разі неможливості проведення чартеру з НАШОЇ вини .
+5. У разі відмови від проведення чартеру з ініціативи клієнта більш ніж за 14 днів до дати чартеру МИ відшкодовуємо повну вартість передплати.
+6. У разі відмови клієнта від проведення чартеру менш ніж за 14 календарних днів до дати чартеру сума передплати не повертається, проте, МИ готові запропонувати Вам інший зручний для Вас день і час чартеру.
+7. Повна оплата чартеру здійснюється безпосередньо в день чартеру перед відправленням яхти на місці.
+						</textarea>
 						</div>
-					</div-->
-				</div>
-			</div>
-		</div>
-	</section>
+						<div>
+							<input type="checkbox" name="check_box" value="1" required>Ви погоджуєтеся з умовами бронювання та оплати<Br>
+						</div>
+                        <button type="submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="food-images food-images-down">
+                    <img src="{{url_for('static', filename='img/kaniv_sea_1.jpg')}}" width="240" height="180" alt="Sea"
+                         class="food">
+                    <img src="{{url_for('static', filename='img/kaniv_sea_2.jpg')}}" width="240" height="180" alt="Sea"
+                         class="food">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 {% endblock %}
