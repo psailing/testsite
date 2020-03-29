@@ -73,11 +73,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .offer {
-	background: url('../img/Greece_Sailing_Banner.jpg') no-repeat center top;
+	background: url('../img/background_img.jpg') no-repeat center top;
 }
 
 .title {
-	padding: 210px 0;
+	padding: 130px 0;
 }
 
 .title__heading {
@@ -100,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 .call {
 	background: #edf1f3;
 	border-bottom: 1px solid #dde3e7;
-	padding: 30px 0;
+	padding: 10px 0;
 }
 
 .phone {
@@ -363,5 +363,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .reservation_form{
+
+}
+
+.form_group{
+    padding-top: 20px;
+}
+
+.datepicker td.active,
+.datepicker td.active:hover
+{
+color: #ffffff;
+background-color: #006dcc;
+background-image:  linear-gradient(to bottom, #0088cc, #0044cc);
+}
+.datetimepicker td.active,
+.datetimepicker td.active:hover
+{
+color: #ffffff;
+background-color: #006dcc;
+background-image:  linear-gradient(to bottom, #0088cc, #0044cc);
+}
+
+.item img{
     display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

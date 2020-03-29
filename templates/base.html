@@ -1,156 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Pereyaslav Sailing</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Sintony:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="static/css/main.css">
-	<link rel="shortcut icon" href="{{url_for('static', filename='img/logo.svg')}}" type="image/png">
+    <meta charset="UTF-8">
+    <title>Pereyaslav Sailing</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Sintony:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="shortcut icon" href="{{url_for('static', filename='img/logo.svg')}}" type="image/png">
+
+<!--    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap-datetimepicker.min.css')}}" />-->
+<!--    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.css" />-->
+<!--    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css" />-->
+<!--    <link type="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">-->
+<!--    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css" />-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
-    <header id="header" class="header">
-        <div class="main-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-1">
-                        <div class="logo"><img src="{{url_for('static', filename='img/logo.svg')}}" alt="Preyaslav Sailing"></div>
+<header id="header" class="header">
+    <div class="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1">
+                    <div class="logo">
+
+                        <img src="{{url_for('static', filename='img/logo.png')}}" alt="Preyaslav Sailing"
+                                           type="image/png">
                     </div>
-                    <div class="col-lg-7">
-                        <nav>
-                            <ul class="menu d-flex justify-content-between">
-                                <li class="menu__item">
-                                    <a href="/">
-                                        Головна
-                                    </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="/gallery">
-                                        Галерея
-                                    </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="/rent_rules">
-                                        Правила оренди
-                                    </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="/reservation">
-                                        Резервація
-                                    </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="/contacts">
-                                        Контакти
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-lg-4">
-                        <div>
-                            <button class="book cta d-flex justify-content-center">
-                                <span class="book__icon"></span>
+                </div>
+                <div class="col-lg-7">
+                    <nav>
+                        <ul class="menu d-flex justify-content-between">
+                            <li class="menu__item">
+                                <a href="/">
+                                    Головна
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="/gallery">
+                                    Галерея
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="/rent_rules">
+                                    Правила оренди
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="/reservation">
+                                    Резервація
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="/contacts">
+                                    Контакти
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <button class="book cta d-flex justify-content-center">
+                            <span class="book__icon"></span>
                             Зарезервуйте подорож
-                            </button>
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>
-
         </div>
-        <div class="offer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="title">
-                            <h1 class="title__heading">
-                                Teast your feelings
-                            </h1>
-                            <p class="title__desc">
-                                on
-                                <span>
+
+    </div>
+    <div class="offer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title">
+                        <h1 class="title__heading">
+                            Teast your feelings
+                        </h1>
+                        <p class="title__desc">
+                            on
+                            <span>
                                     Kaniv see.
                                 </span>
-                            </p>
-                        </div>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
-    	<section id="call" class="call">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
+<section id="call" class="call">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
 
-					<div class="phone d-flex ml-auto mr-auto">
-						<div class="phone__text">
-							Забронювати подорож
-							<span class="yellow">
+                <div class="phone d-flex ml-auto mr-auto">
+                    <div class="phone__text">
+                        Забронювати подорож
+                        <span class="yellow">
 								Можна за номером
 							</span>
-						</div>
-						<div class="phone__digits">
-							<a href="tel:+380732115586">(+38)073-211-5586</a>
-						</div>
-					</div>
+                    </div>
+                    <div class="phone__digits">
+                        <a href="tel:+380732115586">(+38)073-211-5586</a>
+                    </div>
+                </div>
 
-				</div>
-			</div>
-		</div>
-	</section>
+            </div>
+        </div>
+    </div>
+</section>
 
-    {% block content %}
-    {% endblock %}
+{% block content %}
+{% endblock %}
 
-	<footer id="footer" class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<ul class="socials d-flex justify-content-center">
-						<li class="socials__item socials__item_fb">
-							<a href="https://www.facebook.com/alexandr.blavatnyi"><img src="https://img.icons8.com/color/50/000000/facebook-circled.png"></a>
-						</li>
-						<li class="socials__item socials__item_tw">
-							<a title="WhatsApp" href="whatsapp://send/?phone=+380507211791"><img src="https://img.icons8.com/officel/50/000000/whatsapp.png"></a>
-						</li>
-						<li class="socials__item socials__item_tw">
-							<a title="Viber" href="viber://chat?number=380507211791"><img src="https://img.icons8.com/color/50/000000/viber.png"></a>
-						</li>
-						<li class="socials__item socials__item_g">
-							<a title="Messenger" href="https://www.messenger.com/t/alexandr.blavatnyi"><img src="https://img.icons8.com/color/50/000000/facebook-messenger.png"></a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4">
-					<div class="line"></div>
-				</div>
-				<div class="col-lg-4">
-					<div class="credits">
-						2020 ©   All rights reserved
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="line"></div>
-				</div>
-			</div>
-		</div>
-	</footer>
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="socials d-flex justify-content-center">
+                    <li class="socials__item socials__item_fb">
+                        <a href="https://www.facebook.com/alexandr.blavatnyi"><img
+                                src="https://img.icons8.com/color/50/000000/facebook-circled.png"></a>
+                    </li>
+                    <li class="socials__item socials__item_tw">
+                        <a title="WhatsApp" href="whatsapp://send/?phone=+380507211791"><img
+                                src="https://img.icons8.com/officel/50/000000/whatsapp.png"></a>
+                    </li>
+                    <li class="socials__item socials__item_tw">
+                        <a title="Viber" href="viber://chat?number=380507211791"><img
+                                src="https://img.icons8.com/color/50/000000/viber.png"></a>
+                    </li>
+                    <li class="socials__item socials__item_g">
+                        <a title="Messenger" href="https://www.messenger.com/t/alexandr.blavatnyi"><img
+                                src="https://img.icons8.com/color/50/000000/facebook-messenger.png"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="line"></div>
+            </div>
+            <div class="col-lg-4">
+                <div class="credits">
+                    2020 © All rights reserved
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+</footer>
 
-	<div id="modal" class="modal2">
-		<div class="modal2__overlay">
-			<div class="modal2__body">
-				Text
-			</div>
-		</div>
-	</div>
+<div id="modal" class="modal2">
+    <div class="modal2__overlay">
+        <div class="modal2__body">
+            Text
+        </div>
+    </div>
+</div>
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+{% block scripts %}
+{% endblock %}
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+<!--<script src="{{ url_for('static', filename='js/bootstrap-datetimepicker.min.js') }}"></script>-->
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>-->
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>-->
+
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+<!--<script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/en-au.js"></script>-->
+<!--<script data-require="bootstrap@3.3.7" data-semver="3.3.7" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<!--<script data-require="MomentJS@2.10.0" data-semver="2.10.0" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var array="{{ reserved }}".split(',');
+        $('#datetimepicker1').datetimepicker({
+            format : 'DD/MM/YYYY HH:mm',
+            enabledHours: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+            minDate: moment().add('d', 1).toDate(),
+            disabledDates: array,
+            sideBySide: true
+        });
+    });
+</script>
 </body>
 </html>

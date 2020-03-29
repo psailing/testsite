@@ -1,7 +1,7 @@
 {% macro render_field(field) %}
-<div class="form_froup">
-    <label for="inputName" class="col-lg-2">{{ field.label.text }}</label>
-    <div class="col-lg-5">
+<div class="form_group">
+    <label for="inputName" class="col-lg-5">{{ field.label.text }}</label>
+    <div class="col-lg-4">
         {{ field(class="form_control", **kwargs)|safe }}
         <ul>
             {% for error in field.errors %}

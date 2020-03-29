@@ -47,6 +47,15 @@ function toggle_show(id, ids) {
         document.getElementById(ids).innerHTML="Розгорнути";
     }
 }
+$(function () {
+  $('#picker').datetimepicker({
+    datepicker: true,
+    format: 'Y-m-d',
+    value: '2019-02-10'
+  });
+});
+
+$('.carousel').carousel();
 
 //function hide(){
 //    hide=document.getElementById("hide");
