@@ -6,6 +6,21 @@ $(function () {
 		$('#modal').removeClass('show')
 	})
 })
+$(function() {
+  $('#scrollup').click(function() {
+    $("html, body").animate({
+      scrollTop:0
+    },1000);
+  })
+})
+$(window).scroll(function() {
+  if ($(this).scrollTop()>200) {
+    $('#scrollup').fadeIn();
+  }
+  else {
+    $('#scrollup').fadeOut();
+  }
+});
 
 $(document).ready(function() { // Ждём загрузки страницы
 
@@ -56,12 +71,3 @@ $(function () {
 });
 
 $('.carousel').carousel();
-
-//function hide(){
-//    hide=document.getElementById("hide");
-//    button = document.getElementById("button");
-//    if(info.style.display == "none"){
-//    info.style.display = "block";
-//    button.style.display = "none";
-//    }
-//}

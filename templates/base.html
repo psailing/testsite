@@ -16,6 +16,7 @@
 <!--    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css" />-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" />
 </head>
 <body>
 <header id="header" class="header">
@@ -78,11 +79,11 @@
                 <div class="col-lg-12">
                     <div class="title">
                         <h3 class="title__heading">
-                            <b>Відкрийте для себе</b>
+                            <b>Прогулянки на яхті</b>
                         </h3>
                         <p class="title__desc">
                             <span>
-                                    Канівське море.
+                                    в Переяславі.
                                 </span>
                         </p>
                     </div>
@@ -113,6 +114,9 @@
         </div>
     </div>
 </section>
+<div id="scrollup">
+<img src="https://img.icons8.com/ios/50/000000/circled-up-2.png"/>
+</div>
 
 {% block content %}
 {% endblock %}
@@ -191,6 +195,7 @@
 <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
 <script type="text/javascript">
     $(function () {
         var array="{{ reserved }}".split(',');
@@ -201,6 +206,11 @@
             disabledDates: array,
             sideBySide: true
         });
+    });
+</script>
+<script type="text/javascript">
+    $(window).load(function(){
+       $('html, body').animate({scrollTop:$('#call').position().top}, 1000);
     });
 </script>
 </body>
