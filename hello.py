@@ -67,6 +67,7 @@ class MyForm(FlaskForm):
 
 @app.route("/")
 def index():
+	#Don`t work now
     languages = ['ua', 'en', 'pl']
     print(request.args.get('languages'))
     # lang = request.args.get('languages')
