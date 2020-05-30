@@ -1,5 +1,5 @@
 $(function () {
-	$('.book').click(function () {
+	$('.rules').click(function () {
 		$('#modal').addClass('show');
 	});
 	$('.modal2__overlay').click(function() {

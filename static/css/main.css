@@ -166,6 +166,10 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+.food-images div {
+    margin-bottom: 30px;
+}
+
 .food-images__item {
 	margin-bottom: 10px;
 }
@@ -302,14 +306,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .modal2__body {
-	width: 400px;
-	height: 200px;
+	width: 500px;
+	height: 500px;
 	position: fixed;
 	left: 50%;
 	top: 50%;
 	background: #fff;
 	margin-left: -200px;
-	margin-top: -100px;
+	margin-top: -200px;
 	border-radius: 10px;
 	box-shadow: 0 0 50px black;
 }

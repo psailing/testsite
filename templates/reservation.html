@@ -45,14 +45,20 @@
                                 {{ form.empty_textarea(cols="50", rows="2", class='textarea_width') }}
                             </div>
                         </div>
-                       <div class="form_group">
-                            <label for="inputName" class="col-lg-5">{{ form.full_textarea.label }} </label>
+<!--                       <div class="form_group">-->
+<!--                            <label for="inputName" class="col-lg-5">{{ form.full_textarea.label }} </label>-->
+<!--                            <div class="col-lg-4">-->
+<!--                                {{ form.full_textarea(cols="60", rows="5") }}-->
+<!--                            </div>-->
+<!--                        </div>-->
+                        <div class="form_group">
+                            <label for="inputName" class="col-lg-5"></label>
                             <div class="col-lg-4">
-                                {{ form.full_textarea(cols="60", rows="5") }}
+                                <a href="#" class="rules">Умови бронювання та оплати</a>
                             </div>
                         </div>
 						<div>
-						    {{ render_field(form.checkbox) }}
+                            {{ render_field(form.checkbox) }}
                         </div>
                         <div class="form_group">
                             <div class="col-lg-4">
@@ -67,6 +73,19 @@
         </div>
     </div>
 </section>
+<div id="modal" class="modal2">
+    <div class="modal2__overlay">
+        <div class="modal2__body">
+            <p>1. Резервація, зроблена на сайті або по телефону, дійсна протягом 24 годин</p>
+            <p>2. При здійсненні передплати в зазначений термін бронювання зберігається за Вами</p>
+            <p>3. При відсутності передплати протягом 24 годин, бронювання автоматично знімається і, тепер, час і день стають вільними для наступних бронювань</p>
+            <p>4. Сума передплати повертається клієнтові в повному обсязі в разі неможливості проведення чартеру з НАШОЇ провини</p>
+            <p>5. У разі відмови від проведення чартеру з ініціативи клієнта більш ніж за 14 днів до дати чартеру МИ відшкодовуємо повну вартість передплати</p>
+            <p>6. У разі відмови клієнта від проведення чартеру менш ніж за 14 календарних днів до дати чартеру сума передплати не повертається, проте, МИ готові запропонувати Вам інший зручний для Вас день і час чартеру</p>
+            <p>7. Повна оплата чартеру здійснюється безпосередньо в день чартеру перед відправленням яхти на місці.</p>
+        </div>
+    </div>
+</div>
 <!--<script>-->
 <!--    $(function () {-->
 <!--        $('#datetimepicker2').datetimepicker();-->
