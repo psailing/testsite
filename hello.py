@@ -8,11 +8,11 @@ from flask_mail import Mail, Message
 from flask_datepicker import datepicker
 import datetime
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'Thisisasecret'
-Bootstrap(app)
-datepicker(app)
-app.config.update(
+application = Flask(__name__)
+application.config['SECRET_KEY'] = 'Thisisasecret'
+Bootstrap(application)
+datepicker(application)
+application.config.update(
 DEBUG=True,
 #EMAIL SETTINGS
 MAIL_SERVER='smtp.googlemail.com',
@@ -22,7 +22,7 @@ MAIL_USERNAME = 'sskratoss@gmail.com',
 MAIL_PASSWORD = 'ss854184'
 )
 
-mail=Mail(app)
+mail=Mail(application)
 
 def flag_pic(lang):
     if (lang == 'ua'):
@@ -58,7 +58,7 @@ class MyForm(FlaskForm):
 
 
 
-@app.route("/")
+@application.route("/")
 def index():
     languages = ['ua', 'en', 'pl']
     print(request.args.get('languages'))
@@ -73,7 +73,7 @@ def index():
     return render_template('index.html')
 
 
-@app.route("/reservation", methods=['GET', 'POST'])
+@application.route("/reservation", methods=['GET', 'POST'])
 def reservation():
     form = MyForm()
     reserved="2020/03/27,2020/03/28"
@@ -96,7 +96,7 @@ def reservation():
         return ("ok")
 
 
-@app.route("/reservation_complete", methods=['GET', 'POST'])
+@application.route("/reservation_complete", methods=['GET', 'POST'])
 def reservation_complete():
     if request.method == 'GET':
         return render_template('reservation_complete.html')
@@ -118,23 +118,23 @@ def reservation_complete():
         mail.send(msg)
         return render_template('reservation_complete.html')
 
-@app.route("/contacts")
+@application.route("/contacts")
 def contacts():
     return render_template('contacts.html')
 
 
-@app.route("/rent_rules")
+@application.route("/rent_rules")
 def rent_rules():
     return render_template('rent_rules.html')
 
 
-@app.route("/gallery")
+@application.route("/gallery")
 def gallery():
     return render_template('gallery.html')
 
 
-@app.route('/user/<name>')
-@app.route('/user/')
+@application.route('/user/<name>')
+@application.route('/user/')
 def user(name=None):
     if name is None:
         name = request.args.get('name')
@@ -145,4 +145,4 @@ def user(name=None):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    application.run(debug=True)
