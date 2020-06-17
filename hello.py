@@ -5,13 +5,11 @@ from wtforms import StringField, TextAreaField, SelectField, BooleanField, DateT
 from wtforms.validators import InputRequired
 from flask_bootstrap import Bootstrap
 from flask_mail import Mail, Message
-from flask_datepicker import datepicker
 import datetime
 
 application = Flask(__name__)
 application.config['SECRET_KEY'] = 'Thisisasecret'
 Bootstrap(application)
-datepicker(application)
 application.config.update(
 DEBUG=True,
 #EMAIL SETTINGS
