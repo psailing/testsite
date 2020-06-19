@@ -13,11 +13,16 @@ Bootstrap(application)
 application.config.update(
 DEBUG=True,
 #EMAIL SETTINGS
-MAIL_SERVER='smtp.googlemail.com',
+# MAIL_SERVER='smtp.googlemail.com',
+# MAIL_PORT=465,
+# MAIL_USE_SSL=True,
+# MAIL_USERNAME = 'sskratoss@gmail.com',
+# MAIL_PASSWORD = 'ss854184'
+MAIL_SERVER='smtp.meta.ua',
 MAIL_PORT=465,
 MAIL_USE_SSL=True,
-MAIL_USERNAME = 'sskratoss@gmail.com',
-MAIL_PASSWORD = 'ss854184'
+MAIL_USERNAME = 'myrsvmail@meta.ua',
+MAIL_PASSWORD = '12WS45fgg'
 )
 
 mail=Mail(application)
@@ -108,13 +113,14 @@ def reservation_complete():
         print(email)
         msg = Message(
             subject='Прогулянка на яхті для ' + name,
-            sender=email,
+            sender='myrsvmail@meta.ua',
             recipients=
-            [email],
-            body=" Ім'я Прізвище: "+ name +",\n Телефон: " + phone + ",\n Маршрут по часу: " + route + ",\n Бажана дата: " + datetimepicker + "\n Коментар:" + empty_textarea,
+            ['shopinua2012@gmail.com', 'myrsvmail@meta.ua'],
+            body=" Ім'я Прізвище: "+ name +",\n Телефон: " + phone + ",\n Email: " + email + ",\n Маршрут по часу: " + route + ",\n Бажана дата: " + datetimepicker + "\n Коментар:" + empty_textarea,
         )
         mail.send(msg)
         return render_template('reservation_complete.html')
+
 
 @application.route("/contacts")
 def contacts():

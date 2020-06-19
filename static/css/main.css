@@ -316,6 +316,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: -200px;
 	border-radius: 10px;
 	box-shadow: 0 0 50px black;
+	padding-left: 10px;
 }
 
 .show {
@@ -366,6 +367,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .blue_color{
     color: #2da9a0
+}
+
+.red_color{
+    color: #ff0000
 }
 
 .reservation_form{
