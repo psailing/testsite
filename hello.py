@@ -137,15 +137,20 @@ def gallery():
     return render_template('gallery.html')
 
 
-@application.route('/user/<name>')
-@application.route('/user/')
-def user(name=None):
-    if name is None:
-        name = request.args.get('name')
-    if name:
-        return render_template('hello.html', name=name)
-    else:
-        abort(404)
+@application.route("/calendar")
+def calendar():
+    return render_template('calendar.html')
+
+
+# @application.route('/user/<name>')
+# @application.route('/user/')
+# def user(name=None):
+#     if name is None:
+#         name = request.args.get('name')
+#     if name:
+#         return render_template('hello.html', name=name)
+#     else:
+#         abort(404)
 
 
 if __name__ == '__main__':
