@@ -24,11 +24,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-1">
-                    <div class="logo">
-
-                        <img src="{{url_for('static', filename='img/logo.png')}}" alt="Preyaslav Sailing"
-                                           type="image/png">
-                    </div>
+                     <a href="/">
+                        <div class="logo">
+                            <img src="{{url_for('static', filename='img/logo.png')}}" alt="Preyaslav Sailing"
+                                               type="image/png">
+                        </div>
+                     </a>
                 </div>
                 <div class="col-lg-7">
                     <nav>
@@ -49,8 +50,8 @@
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a href="/reservation">
-                                    Резервація
+                                <a href="/calendar">
+                                    Календар
                                 </a>
                             </li>
                             <li class="menu__item">
@@ -61,7 +62,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-12">
                     <div>
                         <a href="/reservation">
                             <button class="book cta d-flex justify-content-center">

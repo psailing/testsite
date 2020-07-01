@@ -354,7 +354,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo > img{
     width: 70%;
-    margin-left: 30px;
+    max-width: 70px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .fa-whatsapp {
@@ -438,3 +441,13 @@ background-image:  linear-gradient(to bottom, #0088cc, #0044cc);
         .thumb {
             padding: 5px;
         }
+
+p {
+    font-size: 120%
+}
+
+.book{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
