@@ -73,30 +73,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .offer {
-	background: url('../img/background_img.jpg') no-repeat center top;
+	background: url('../img/main_image.jpg') no-repeat center;
+	background-size: 100%;
 }
 
 .title {
 	/*padding: 130px 0;*/
 	/*padding: 10px 0px 300px;*/
-	padding: 310px 40px 10px;
+	padding: 410px 40px 0px;
 }
 
 .title__heading {
+    font-family: 'Playfair Display', serif;
 	font-size: 48px;
-	color: #fff;
+	color: #fe8300;
 }
 
 .title__desc {
 	font-family: 'Playfair Display', serif;
 	font-weight: 700;
-	font-size: 40px;
+	font-size: 38px;
 	color: #fff;
 	margin-top: -15px;
 }
 
 .title__desc span {
-	color: #fea100;
+	color: #fe8300;
 }
 
 .call {
@@ -450,4 +452,8 @@ p {
     position: relative;
     left: 50%;
     transform: translate(-50%, 0);
+}
+
+.calendar{
+    margin: auto;
 }
