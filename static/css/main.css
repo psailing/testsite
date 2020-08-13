@@ -446,7 +446,8 @@ background-image:  linear-gradient(to bottom, #0088cc, #0044cc);
         }
 
 p {
-    font-size: 120%
+    text-align: justify;
+    font-size: 120%;
 }
 
 .book{
